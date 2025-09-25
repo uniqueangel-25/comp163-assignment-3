@@ -48,3 +48,24 @@ else:
     study_hours += 7
     stress_level += 10
     # Handle invalid input
+
+Study_options = ["Programming", "Math", "English", "History"]
+print("Choose your study focus from:", Study_options)
+Subject =  input("Enter subject:")
+if Subject in Study_options: 
+    if Subject in ["Programming", "Math"]:
+        current_gpa += 0.2
+        social_points -= 5
+        stress_level += 3
+    elif Subject in ["English", "History"]:
+        current_gpa += 0.1
+        social_points += 5
+        stress_level -= 2
+        pass
+else:
+    print("Invalid Subject")
+print("Your GPA is: ", round(current_gpa), 2)
+print("Your study hours:",study_hours)
+print("Your social points:",social_points)
+print("Your stress level:",stress_level, "\n")
+    # Handle invalid input
