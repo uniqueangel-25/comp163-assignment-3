@@ -10,3 +10,41 @@ print("Your GPA is:",current_gpa)
 print("Your study hours:",study_hours)
 print("Your social points:",social_points)
 print("Your stress level:",stress_level, "\n")
+
+print("Choose your course load:")
+print("A) Light (12 credits)")  
+print("B) Standard (15 credits)")
+print("C) Heavy (18 credits)")
+choice = input("Your choice: ")
+
+
+if choice == "A": 
+    if current_gpa >= 2.0: 
+        study_hours += 5 
+        stress_level -= 5 
+    else: 
+        study_hours += 2 
+        stress_level += 5
+
+    # Use comparison operators to check GPA and adjust variables
+elif choice == "B": 
+    if current_gpa >= 3.0:
+        study_hours += 6 
+        stress_level -= 6
+    else: 
+        study_hours += 6 
+        stress_level += 6
+    # Different logic path
+elif choice == "C":
+    if current_gpa >= 3.5: 
+        study_hours += 8 
+        stress_level -= 8
+    else: 
+        study_hours += 8 
+        stress_level += 8
+    # Heavy load - check if GPA >= 3.5 for different outcomes
+else: 
+    print("Invalid input")
+    study_hours += 7
+    stress_level += 10
+    # Handle invalid input
